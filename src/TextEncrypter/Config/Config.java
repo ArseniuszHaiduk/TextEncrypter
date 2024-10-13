@@ -1,11 +1,11 @@
 package TextEncrypter.Config;
 
-import TextEncrypter.ConsoleManager.Console;
-import TextEncrypter.Encrypter.Encrypter;
+import TextEncrypter.ConsoleManager.IConsole;
+import TextEncrypter.Encrypter.IEncrypter;
 import TextEncrypter.UserInteractor.UserInteractor;
 
 public class Config {
-    public Config(Encrypter encrypter, Console console){
+    public Config(IEncrypter encrypter, IConsole console){
         new UserInteractor(encrypter, console).Interact();
     }
 }

@@ -13,7 +13,7 @@ public class UserInteractor implements IUserInteractor{
 
     public void Interact(){
         try {
-            console.WriteLine("Encrypter 1.0:\n1)Encrypt\n2)Decrypt");
+            console.WriteLine("Encrypter 1.0:\n1)Encrypt\n2)Decrypt\nType 'Encrypt', for example.");
             switch(Options.OptionsEnum.valueOf(console.ReadLine())){
                 case Options.OptionsEnum.Encrypt:
                     console.WriteLine("Message for Encryption:");
@@ -26,7 +26,7 @@ public class UserInteractor implements IUserInteractor{
             }
         }
         catch(IllegalArgumentException exception){
-            console.WriteLine("Incorrect Input!");
+            console.WriteLine("Incorrect Input!\nQuitting...");
         }
     }
 }
